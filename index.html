@@ -1,0 +1,191 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- BUILDSTAMP site-v2-visual-1 -->
+<title>Suara — a week of posts for your shop</title>
+<meta name="description" content="Suara writes and designs a week of posts for your kedai — and refuses to write anything you did not tell it.">
+<style>
+@font-face{font-family:PJS;src:url(fonts/plus-jakarta-sans-latin-400-normal.woff2)format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:PJS;src:url(fonts/plus-jakarta-sans-latin-500-normal.woff2)format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:PJS;src:url(fonts/plus-jakarta-sans-latin-700-normal.woff2)format('woff2');font-weight:700;font-display:swap}
+:root{--ink:#1A1520;--coral:#FF6A45;--deep:#E24A28;--gold:#FFC24B;--cream:#FDF7EF;--muted:#6B6270}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:PJS,ui-sans-serif,system-ui,sans-serif;color:var(--ink);background:var(--cream);
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- nav: four words ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;
+  justify-content:space-between;padding:16px 26px;
+  background:linear-gradient(#FDF7EF 55%,rgba(253,247,239,0));pointer-events:none}
+nav>*{pointer-events:auto}
+.brand{display:flex;align-items:center;gap:9px;font-size:21px;font-weight:700;color:var(--deep);
+  letter-spacing:-.03em}
+.brand img{width:26px;height:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;
+  border:0;border-radius:100px;padding:13px 24px;font:inherit;font-size:15px;font-weight:700;
+  text-decoration:none;cursor:pointer;transition:transform .16s cubic-bezier(.22,.61,.24,1)}
+.btn:hover{transform:translateY(-2px)}
+.btn.coral{background:var(--deep)}
+.btn.big{padding:17px 34px;font-size:17px}
+
+/* ---------- hero: the wall IS the page ---------- */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;
+  justify-content:center;align-items:center;text-align:center;overflow:hidden;padding:120px 0 0}
+h1{font-size:clamp(46px,10.5vw,132px);line-height:.92;letter-spacing:-.045em;font-weight:700;
+  position:relative;z-index:2}
+h1 em{font-style:normal;color:var(--deep);display:block}
+.hero p{position:relative;z-index:2;margin:22px auto 0;font-size:clamp(16px,2.1vw,20px);
+  color:var(--muted);max-width:30ch;line-height:1.45}
+.hero .btn{position:relative;z-index:2;margin-top:30px}
+.wall{margin-top:52px;width:100%;display:flex;flex-direction:column;gap:14px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+          mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.row{display:flex;gap:14px;width:max-content}
+.row img{width:clamp(150px,19vw,238px);aspect-ratio:1;object-fit:cover;border-radius:18px;
+  box-shadow:0 24px 50px -34px rgba(26,21,32,.75)}
+@media (prefers-reduced-motion:no-preference){
+  .row{animation:slideL 46s linear infinite}
+  .row.b{animation-name:slideR;animation-duration:58s}
+}
+@keyframes slideL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes slideR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+/* ---------- the refusal, shown ---------- */
+section{padding:clamp(80px,11vw,150px) 0}
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--deep);text-align:center}
+h2{font-size:clamp(30px,5.4vw,62px);line-height:1.02;letter-spacing:-.035em;font-weight:700;
+  text-align:center;margin-top:14px}
+.proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;margin-top:56px}
+.card{border-radius:24px;overflow:hidden;background:#fff;
+  box-shadow:0 34px 70px -50px rgba(26,21,32,.8)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.cap{padding:20px 22px 24px;font-size:18px;line-height:1.35;font-weight:600}
+.cut{text-decoration:line-through;text-decoration-color:var(--deep);text-decoration-thickness:3px;
+  color:#B0A79C}
+.stamp{display:inline-flex;align-items:center;gap:7px;margin-top:14px;border-radius:99px;
+  padding:6px 13px;font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.no{background:#FBE3DA;color:#B23A17} .yes{background:#DCEBDF;color:#2F6B3D}
+
+/* ---------- three steps, three pictures ---------- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px;margin-top:56px}
+.step img{border-radius:20px;aspect-ratio:1;object-fit:cover;
+  box-shadow:0 26px 54px -40px rgba(26,21,32,.8)}
+.step b{display:block;margin-top:18px;font-size:20px;letter-spacing:-.02em}
+.step span{display:block;margin-top:5px;color:var(--muted);font-size:15px}
+.n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--deep);color:#fff;font-size:12px;font-weight:800;margin-bottom:14px}
+
+/* ---------- price: one number ---------- */
+.price{text-align:center}
+.rm{font-size:clamp(64px,13vw,150px);font-weight:700;letter-spacing:-.05em;line-height:1;
+  color:var(--ink)}
+.rm small{font-size:.22em;color:var(--muted);font-weight:600;letter-spacing:-.01em}
+.price p{color:var(--muted);margin-top:12px;font-size:17px}
+
+/* ---------- close ---------- */
+.close{background:var(--ink);color:#fff;text-align:center;padding:clamp(90px,13vw,170px) 0;
+  position:relative;overflow:hidden}
+.close h2{color:#fff}
+.close em{font-style:normal;color:var(--gold);display:block}
+.close .btn{background:#fff;color:var(--ink);margin-top:34px}
+.foot{padding:26px;text-align:center;color:var(--muted);font-size:13.5px}
+
+/* ⭐ On a phone the headline was taking 60% of the screen and the wall — the entire argument for
+   this design — got a sliver at the bottom. "More visual" has to survive the device most of these
+   owners will actually open it on. Tighter type, less padding, bigger tiles. */
+@media (max-width:560px){
+  .hero{padding-top:86px;min-height:auto}
+  h1{font-size:clamp(38px,11vw,54px);letter-spacing:-.035em}
+  .hero p{margin-top:14px;font-size:15.5px}
+  .hero .btn{margin-top:20px}
+  .wall{margin-top:30px;padding-bottom:34px}
+  .row img{width:172px;border-radius:15px}
+  .row{gap:11px} .wall{gap:11px}
+}
+
+/* everything rises once, on entry */
+.rise{opacity:0;transform:translateY(26px)}
+.rise.in{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.22,.61,.24,1),
+  transform .7s cubic-bezier(.22,.61,.24,1)}
+@media (prefers-reduced-motion:reduce){.rise{opacity:1;transform:none}}
+</style></head><body>
+
+<nav>
+  <a class="brand" href="#top"><img src="mark.svg" alt="">súara</a>
+  <a class="btn" href="#start">Start free</a>
+</nav>
+
+<header class="hero" id="top">
+  <h1>A week of posts.<em>Nothing you didn&rsquo;t say.</em></h1>
+  <p>For your kedai. In Bahasa Melayu or English.</p>
+  <a class="btn coral big" href="#start">See a week</a>
+  <div class="wall" aria-hidden="true">
+    <div class="row"><img src="m/p1.jpg" alt="" decoding="async"><img src="m/p2.jpg" alt="" decoding="async"><img src="m/p3.jpg" alt="" decoding="async"><img src="m/p4.jpg" alt="" decoding="async"><img src="m/p5.jpg" alt="" decoding="async"><img src="m/p6.jpg" alt="" decoding="async"><img src="m/p1.jpg" alt="" decoding="async"><img src="m/p2.jpg" alt="" decoding="async"><img src="m/p3.jpg" alt="" decoding="async"><img src="m/p4.jpg" alt="" decoding="async"><img src="m/p5.jpg" alt="" decoding="async"><img src="m/p6.jpg" alt="" decoding="async"></div>
+    <div class="row b"><img src="m/w1.jpg" alt="" decoding="async"><img src="m/w2.jpg" alt="" decoding="async"><img src="m/w3.jpg" alt="" decoding="async"><img src="m/w4.jpg" alt="" decoding="async"><img src="m/w5.jpg" alt="" decoding="async"><img src="m/w6.jpg" alt="" decoding="async"><img src="m/w1.jpg" alt="" decoding="async"><img src="m/w2.jpg" alt="" decoding="async"><img src="m/w3.jpg" alt="" decoding="async"><img src="m/w4.jpg" alt="" decoding="async"><img src="m/w5.jpg" alt="" decoding="async"><img src="m/w6.jpg" alt="" decoding="async"></div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow rise">The part nobody else does</p>
+    <h2 class="rise">It would rather say nothing<br>than say something you didn&rsquo;t.</h2>
+    <div class="proof">
+      <div class="card rise">
+        <img src="m/w1.jpg" alt="">
+        <div class="cap"><span class="cut">&ldquo;From our halal-certified kitchen&rdquo;</span>
+          <span class="stamp no">Blocked</span></div>
+      </div>
+      <div class="card rise">
+        <img src="m/p2.jpg" alt="">
+        <div class="cap"><span class="cut">&ldquo;Best kopitiam in KL&rdquo;</span>
+          <span class="stamp no">Blocked</span></div>
+      </div>
+      <div class="card rise">
+        <img src="m/p3.jpg" alt="">
+        <div class="cap">&ldquo;The uncle remembers how you take it.&rdquo;
+          <span class="stamp yes">Your words</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow rise">How it works</p>
+    <h2 class="rise">Three steps. Then it runs.</h2>
+    <div class="steps">
+      <div class="step rise"><img src="m/p4.jpg" alt=""><span class="n">1</span>
+        <b>Tell it once</b><span>What you sell. Who comes in.</span></div>
+      <div class="step rise"><img src="m/p5.jpg" alt=""><span class="n">2</span>
+        <b>It makes your week</b><span>Posts, stories, captions.</span></div>
+      <div class="step rise"><img src="m/p6.jpg" alt=""><span class="n">3</span>
+        <b>You say yes</b><span>From your phone. Nothing posts by itself.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="price" id="start">
+  <div class="wrap">
+    <p class="eyebrow rise">Pricing</p>
+    <div class="rise"><div class="rm">RM199<small> / month</small></div>
+    <p>Two weeks free. No card.</p>
+    <p style="margin-top:26px"><a class="btn coral big" href="#start">Start free</a></p></div>
+  </div>
+</section>
+
+<section class="close">
+  <div class="wrap">
+    <h2 class="rise"><em>Ada suara.</em>You have a voice.</h2>
+    <div class="rise"><a class="btn big" href="#start">Start free</a></div>
+  </div>
+</section>
+<div class="foot">Kuala Lumpur &middot; hello@suara.my</div>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.rise').forEach((el,i)=>{el.style.transitionDelay=(i%3)*90+'ms';io.observe(el);});
+</script>
+</body></html>
